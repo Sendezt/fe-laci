@@ -1,0 +1,192 @@
+import type { LucideIcon } from 'lucide-react';
+import { LayoutGrid, Wheat, Coffee, Soup, Cookie, BroomSparkles } from 'lucide-react';
+
+export interface Product {
+  id: string;
+  name: string;
+  category: 'Sembako' | 'Minuman' | 'Makanan Instan' | 'Snack & Camilan' | 'Kebutuhan Rumah Tangga';
+  categoryLabel?: string;
+  price: number;
+  unit: string;
+  description: string;
+  image: string;
+  status: string;
+  location: string;
+  badge: string;
+}
+
+export const CATEGORIES: ReadonlyArray<{ id: string; label: string; icon: LucideIcon }> = [
+  { id: 'all', label: 'Semua', icon: LayoutGrid },
+  { id: 'Sembako', label: 'Sembako', icon: Wheat },
+  { id: 'Minuman', label: 'Minuman', icon: Coffee },
+  { id: 'Makanan Instan', label: 'Makanan Instan', icon: Soup },
+  { id: 'Snack & Camilan', label: 'Snack & Camilan', icon: Cookie },
+  { id: 'Kebutuhan Rumah Tangga', label: 'Rumah Tangga', icon: BroomSparkles },
+];
+
+export const QUICK_KEYWORDS = [
+  'Indomie',
+  'Aqua',
+  'Minyak Goreng',
+  'Gula Pasir',
+  'Telur Ayam',
+];
+
+export const PRODUCTS: Product[] = [
+  {
+    id: '1',
+    name: 'Indomie Goreng',
+    category: 'Makanan Instan',
+    categoryLabel: 'Makanan Instan',
+    price: 3500,
+    unit: '/ bungkus',
+    description: 'Varian original kecap manis & bawang goreng',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAjI7V1xqDl4WX87MrIKV0d4SIbiuQBPK30oTj6dMRj5r9xsEZcP9sxBtosBxCxf4jACskXZcL_ATGjU7KLlo7YpVIPAVZr4yqxIKToupikQlUhe4x2RBhdKisetCR8sbkomE5SNdOqee6aQm55k7IL32goGpFYEPmvuud1ISrksG2jHgxT86NZzJ-9iw4AO3adCU42afJ-YRVysGD0vzl9_QtZ6grLEQ35dqUC48FNSC_zuSBAoe15uA',
+    status: 'Ready',
+    location: 'Di Etalase',
+    badge: 'Satuan Eceran',
+  },
+  {
+    id: '2',
+    name: 'Aqua 600ml',
+    category: 'Minuman',
+    categoryLabel: 'Minuman',
+    price: 3000,
+    unit: '/ botol',
+    description: 'Air mineral murni kemasan botol sedang',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAa1MJmbUo7tBVOl7y91B6JxO5KXTL1GzoA9iplgKW-c8EgkTkVtz3Ky5W92-jKUa-Jsa-ScPNDKjcrlBuxbcaJHSNcOIGAoXK2lfRBqLz30sXyQh50BhB0GOslp1ozcPpQop4Fdjvvs6TsNNAzxXrHc7AUJStAJXErwaqBuPvIukTong-NniDxlo9gAfFvrFehkxh_jZN-5ggAZqD9rpoW0Ljk1lX_CZJq_mIZqlUsMO-t1spmib5x6A',
+    status: 'Ready Dingin/Biasa',
+    location: 'Di Kulkas & Rak',
+    badge: 'Tersedia Dingin',
+  },
+  {
+    id: '3',
+    name: 'Gula Pasir Gulaku 1kg',
+    category: 'Sembako',
+    categoryLabel: 'Sembako',
+    price: 17500,
+    unit: '/ kg',
+    description: 'Gula tebu murni kemasan hijau premium',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAWLDBVXUuM1rVTf_aZ3by7fboW_CsbBEzRONkFqZEOgEkRWSdjdBRnJa-0nw3HpA2nE9Nff6j9jr7zHSL1iFr_WMB0g10uxGOcgO-hI5XTCzbztU3aHPsXksiLXktYR9SlZLNBBZ96GoVcXdY3BLp_m0xEFb1bz7MCib5xk-Wn2oThlWTRKiWUWbnSRDJ6W7Ktb2-Ns9MD-omFtcCPAOyrIUhBLZ0-SMlO3ImFmVbt0sFbI2aQHb5UhA',
+    status: 'Stok Banyak',
+    location: 'Rak Sembako',
+    badge: 'Segel Pabrik',
+  },
+  {
+    id: '4',
+    name: 'Teh Pucuk Harum 350ml',
+    category: 'Minuman',
+    categoryLabel: 'Minuman',
+    price: 4000,
+    unit: '/ botol',
+    description: 'Teh melati wangi segar siap minum',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA3WN1KYyoWz7RLCrToHk26TivmJ8ec-YEil-94lwOPiCxhM5HPQUJSVdKlmZXX_EireFoz4B_wG4okbcO9X_LrYPE0uSyOsh2xFCHB29oxMJPpnijIQNkrI_fe7UMsaA6lF5AjbKIFd0q3rgxoPoDyDU20JaqiOLWTlIZwPj02ka6pv-GP65kLrBHtE6HgE9sZ8qWIwT5ZxNZaeJ3xfvOWMvoJKb8bMEa3azcBP0kpew_TbtJUKwGVyA',
+    status: 'Ready Dingin',
+    location: 'Showcase Minuman',
+    badge: 'Dingin/Normal',
+  },
+  {
+    id: '5',
+    name: 'Chitato Sapi Panggang 68g',
+    category: 'Snack & Camilan',
+    categoryLabel: 'Snack',
+    price: 10000,
+    unit: '/ bungkus',
+    description: 'Keripik kentang bergelombang rasa BBQ',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCPerWBY_y-bZtbfi79q9J8HRan4WWsyoKatIcM0rXtTq1CdSUEb_13CpLtVuCOJoCsnNIcQ1NHFznWNTz7plJPxavjqB3xO2tKx5Kz4oV9Dyv990lJe0D6eYTA1nHR54UsDGnsbm9Tf8QiKzivQ48P7PYfZNKAniQWF5px4LeDznKeHCQn3zK1_f79_lvEMvIyXVnTekLRwx1tN_YILsUPprowYWitaiHltpphrG65LNnrV22TtHyHYQ',
+    status: 'Ready',
+    location: 'Rak Gantung Snack',
+    badge: 'Ukuran Regular',
+  },
+  {
+    id: '6',
+    name: 'Minyak Goreng Bimoli 1L',
+    category: 'Sembako',
+    categoryLabel: 'Sembako',
+    price: 19500,
+    unit: '/ pouch',
+    description: 'Minyak kelapa sawit murni kemasan pouch',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDnhThlM3b8ZdH9-khpFpl2C5GHbD2xYyI2Mnm98Jei9ncp7tXQLe43mrw9E2iy94xLl3MuNiZfDLJn39593LcIKH65B2KGaRHM9G6pbU1uTkbKD7pLcT7C8XfwTWzEDQoVcocCaOGoNi_eR2dlcpnIj6JA0WqkvPeV82r3juE6DNcXf4nULpGNq_L2SsE40Uwd4iChni41FFlROAahxK1NqCTQTmZ90xiPqc8RmoMh0s3jXWAaFIIxCw',
+    status: 'Ready',
+    location: 'Rak Minyak',
+    badge: 'Refill 1 Liter',
+  },
+  {
+    id: '7',
+    name: 'Kopi Kapal Api Special Mix',
+    category: 'Minuman',
+    categoryLabel: 'Minuman',
+    price: 2000,
+    unit: '/ sachet',
+    description: 'Kopi bubuk hitam plus gula mantap',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAYuiLEY8H3iTDVphfKkcLNrNr_UHro2BWCurNxncL-npFtkSUIzGAbgK4OhDdDMVjptoVfM7zmnE8bcacASv5nS11AgdxJaM-EHAQffIEmbn6_xdJ1Avi0ktsORP25Ai-JU4HhFhFbOm2H1g4M_FKseat-RocVCX7PlYcul_Zr1uosH1RaqMoEvoTUMvCOmAW5asOr62kBvNByxpQrYawuwZkrW30W1tDKUlp8TXHV7xD8HH-9n4-kNQ',
+    status: 'Ready Renceng',
+    location: 'Rencengan Depan',
+    badge: 'Eceran Satuan',
+  },
+  {
+    id: '8',
+    name: 'Mie Sedaap Goreng',
+    category: 'Makanan Instan',
+    categoryLabel: 'Makanan Instan',
+    price: 3000,
+    unit: '/ pcs',
+    description: 'Mie goreng gurih kriuk-kriuk bawang',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBDrB-qWsdAOp3rUr7vNz49tHDOB3m7KdDU_0HMRz5X3D6X8IViVW-BrD6HN9XlN_6HqakOv6gwPP18YoMFWwiBhx2hIvHqempZtYdK0Zgi3YI9IpGEKRy35SYZO-TogmmCoh83ktTTqoLLB_u8LfVNcjMh9WUN6bxOzTe5my5zmhPnt3Q00RglulbcBvr0f-5TqnmFhwfEICFcKdIMBtyMR6tWXXOy_OqZnA9Fx2PkFmTWoWWcvcc_8g',
+    status: 'Ready',
+    location: 'Rak Mie Instan',
+    badge: 'Siap Masak',
+  },
+  {
+    id: '9',
+    name: 'Telur Ayam Negeri Fresh',
+    category: 'Sembako',
+    categoryLabel: 'Sembako',
+    price: 28000,
+    unit: '/ kg',
+    description: 'Telur baru datang langsung dari peternak',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBtDAdUqmHCU9_pTTZ3yFtFAaSMRDhb7rIxk8m8_Sq7gE4OQqb1glWxD5KcQuXE9_URuXZYurtgiKxeL_yU6Xomee2W87xKt0K5W5S15k9JdEeVfEU1GxAN5H3OdkrIFGywrv_DA-CgBISIPcqI4WMJY66bUkPCtU_pypKpIeNjVMHsStwS5lQCatPIXi81D7H6N3UXc4YiZqw4Z1ZHaj3y5pOhS9UCx0Ri5zl9JRAZSU0pxeRIrAsolg',
+    status: 'Timbang Pas',
+    location: 'Meja Kasir Timbangan',
+    badge: 'Bisa Beli 1/2 kg',
+  },
+  {
+    id: '10',
+    name: 'Beras Setra Ramos 5kg',
+    category: 'Sembako',
+    categoryLabel: 'Sembako',
+    price: 72000,
+    unit: '/ sak',
+    description: 'Beras putih bersih, pulen dan harum',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuA7tdIiw5YyV9vaXNCbI7sMzZ0QojwZc6WkyPX9jl3uekCRgwH_3Yif82shyW3weK_-tAcktixxJzO33qaJk5d1OfLl_NXp7OipWSHnkGKLKitUtx5Q6w5m1ZDqLk7df4JAKnjtrKDsTXLD2Yejf6KYxLvsyg7GYW9sIJ1S5H7nL_vNbRT7KJsAXFghkRk_NTdLkK_GxhkqGLUEtCHv-bnBGWja4pV7UEN3g3LLZemLP9sfsvMk1aN5lg',
+    status: 'Pulen',
+    location: 'Sudut Karung Beras',
+    badge: 'Kemasan 5 kg',
+  },
+  {
+    id: '11',
+    name: 'Sabun Mandi Lifebuoy',
+    category: 'Kebutuhan Rumah Tangga',
+    categoryLabel: 'Rumah Tangga',
+    price: 4500,
+    unit: '/ batang',
+    description: 'Sabun batang anti-bakteri merah 110g',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCYkEIpsjJ0t4y3N6iHQKVyEIARJa1NwZKENQH3tH0124QQfOtoi-qEDmcJLxL_a1-N-hXy6flvTr0i1oFG-EgQnFr8qdirqFzbJfwnG5UtDKv6rtpmbPuJGpuYZxaIWfCNjHt3ZC0ijO2stPpWcOrTKEFqGWu4E5QMFDQGqZJ6UUbp9lZKVKD7i8tKPMxjVmbv8xOTMmqa9zIPACdXyZ7eTiuecaw6Qh4vSdyHRCJoYbUauhB9gh0Keg',
+    status: 'Ready',
+    location: 'Rak Mandi & Cuci',
+    badge: 'Kemasan Batang',
+  },
+  {
+    id: '12',
+    name: 'Sunlight Pencuci Piring 750ml',
+    category: 'Kebutuhan Rumah Tangga',
+    categoryLabel: 'Rumah Tangga',
+    price: 14000,
+    unit: '/ pouch',
+    description: 'Ekstrak jeruk nipis asli hilangkan lemak',
+    image: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAWYwLhxjuflE8W_hstrPI6e8PVROqd3IfgZ3Ka0OinOh2PJdUytc3ki2t46U1di-oECEZHJThnAXc_oZCULIWslqBi31X_QbQTibptC8D4Bdiwus7jrc6iggMRZkT7SKAQbOLJpCkba2HmiEyf93rHbBP0pZIAazAxkMc2CPrAIa4yaEQnQC0RC4p8UgUN86SnLsB_JKfLvKtLx_zqN-zVvbKNJD8dsSmawQ0AWvT8impurdYaWwS42A',
+    status: 'Ready',
+    location: 'Rak Sabun Cuci',
+    badge: 'Isi Ulang 750ml',
+  },
+];
